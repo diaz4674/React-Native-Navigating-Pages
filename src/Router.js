@@ -6,21 +6,27 @@ import EmployeeList from './components/EmployeeList'
 const RouterComponent = () => {
     return (
         <Router>
-            <Scene key = 'root'>
+            <Scene key = 'root' hideNavBar>
+            <Scene key = 'auth' >
                 <Scene 
-                    key= "login" 
-                    component = {LoginForm} 
-                    title = "Please Login" 
-                    titleStyle = {styles.titleStyle}    
-                    initial
-                    />
-                <Scene 
-                    key = "employeeList"
-                    component= {EmployeeList}
-                    title = "Employees"
-                    titleStyle = {styles.titleStyle}  
-                />
+                        key= "login" 
+                        component = {LoginForm} 
+                        title = "Please Login" 
+                        titleStyle = {styles.titleStyle}    
+                        initial
+                        />
             </Scene>
+            <Scene key = 'main'> 
+                <Scene 
+                        key = "employeeList"
+                        component= {EmployeeList}
+                        title = "Employees"
+                        titleStyle = {styles.titleStyle}  
+                    />
+                </Scene>       
+                {/* <Scene key = "E"/> */}
+            </Scene>
+
         </Router>
     )
 }
