@@ -5,7 +5,6 @@ import {createStore, applyMiddleware} from 'redux'
 import reducers from './reducers'
 import firebase from 'firebase'
 import LoginForm from './components/LoginForm';
-import { create } from 'istanbul-reports';
 
 class App extends React.Component {
     componentDidMount(){
