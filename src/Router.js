@@ -1,6 +1,7 @@
 import React from 'react'
 import {Scene, Router} from 'react-native-router-flux'
 import LoginForm from './components/LoginForm'
+import EmployeeList from './components/EmployeeList'
 
 const RouterComponent = () => {
     return (
@@ -10,12 +11,27 @@ const RouterComponent = () => {
                     key= "login" 
                     component = {LoginForm} 
                     title = "Please Login" 
-                    titleStyle = {{textAlign: 'center', flex: 1}}    
+                    titleStyle = {styles.titleStyle}    
+                    initial
                     />
+                <Scene 
+                    key = "employeeList"
+                    component= {EmployeeList}
+                    title = "Employees"
+                    titleStyle = {styles.titleStyle}  
+                />
             </Scene>
         </Router>
 
     )
 }
+
+const styles = {
+    titleStyle: {
+        textAlign: 'center', flex: 1
+    }
+}
+
+
 
 export default RouterComponent
